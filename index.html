@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma. Rejoice D. Gabas | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --red: #7f0707;
+    --bright-red: #df0000;
+    --black: #080808;
+    --card: #141414;
+    --white: #ffffff;
+    --gray: #bdbdbd;
+}
+
+body {
+    background: #101014;
+    color: var(--white);
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.page {
+    width: 94%;
+    max-width: 1450px;
+    margin: 30px auto;
+    background: var(--black);
+    border: 1px solid #242424;
+    overflow: hidden;
+    scroll-margin-top: 15px;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 24px 5%;
+    border-bottom: 1px solid #222;
+    position: relative;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--bright-red);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4141;
+}
+
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    flex: 1;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(127, 7, 7, 0.18) 0%,
+            rgba(8, 8, 8, 0) 65%
+        );
+}
+
+
+.big-title {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.big-title h1 {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: clamp(65px, 13vw, 165px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    color: rgba(127, 7, 7, 0.22);
+}
+
+    
+.profile-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 440px;
+    padding: 35px 25px 32px;
+    text-align: center;
+    border-radius: 28px;
+    background: linear-gradient(
+        180deg,
+        #8a0a0a 0%,
+        #3a0505 42%,
+        #0a0a0a 100%
+    );
+    border: 1px solid #5c0b0b;
+    box-shadow:
+        0 20px 50px rgba(127, 7, 7, 0.35),
+        0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+.card-title {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: clamp(35px, 7vw, 48px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+
+.avatar-wrap {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 28px;
+}
+
+.avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    box-shadow:
+        0 0 0 5px #7f0707,
+        0 0 30px rgba(223, 0, 0, 0.45);
+    object-fit: cover;
+    object-position: center top;
+    background: #1a0505;
+}
+
+
+.status-dot {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #10b981;
+    border: 4px solid #0a0a0a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.hello {
+    color: #ff3333;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.name {
+    color: white;
+    font-size: clamp(22px, 5vw, 30px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.intro-description {
+    color: #d6d6d6;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.cover-from {
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.cover-from p {
+    color: #ff3333;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.cover-from h2 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+
+.section {
+    padding: 65px 7%;
+    border-top: 1px solid #222;
+}
+
+.section-label {
+    color: #e34b4b;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: var(--bright-red);
+}
+
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 21px;
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    background: var(--red);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a50b0b;
+    border-color: #d82b2b;
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: #555;
+}
+
+.btn-outline:hover {
+    background: #1b1b1b;
+}
+
+
+.about-intro {
+    max-width: 850px;
+}
+
+.about-name {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: clamp(30px, 5vw, 53px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.about-name span {
+    color: var(--bright-red);
+}
+
+.about-description {
+    color: #d0d0d0;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 800px;
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: var(--card);
+    border: 1px solid #292929;
+    border-left: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 20px;
+    min-width: 0;
+}
+
+.contact-card .label {
+    display: block;
+    color: #e65a5a;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: white;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+
+.education-card {
+    background: var(--card);
+    padding: 25px;
+    border: 1px solid #292929;
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+}
+
+.education-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.education-card p {
+    color: var(--gray);
+    margin-bottom: 8px;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 5px;
+    padding: 7px 12px;
+    background: #300909;
+    border: 1px solid #651212;
+    border-radius: 4px;
+    color: #ffb1b1;
+    font-size: 12px;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.skill-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid #292929;
+    border-radius: 6px;
+    padding: 18px;
+    color: #e4e4e4;
+    font-size: 14px;
+}
+
+.skill-mark {
+    color: #ff4949;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.timeline {
+    border-left: 2px solid #651212;
+    margin-left: 8px;
+    padding-left: 25px;
+}
+
+.experience-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid #292929;
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 28px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #df0000;
+    border: 3px solid black;
+}
+
+.experience-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.experience-card .company {
+    color: #ff6969;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.experience-card .date {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+    color: #d2d2d2;
+}
+
+.experience-card li {
+    margin-bottom: 10px;
+    padding-left: 3px;
+    line-height: 1.7;
+}
+
+
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.activity-card {
+    background: var(--card);
+    border: 1px solid #292929;
+    border-radius: 6px;
+    padding: 22px;
+}
+
+.activity-card h3 {
+    color: #ff6969;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #050505;
+    border-top: 1px solid #252525;
+    color: #aaa;
+    font-size: 13px;
+}
+
+footer a {
+    color: #ff6969;
+    text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+    .page {
+        width: 96%;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .hero-content {
+        min-height: 650px;
+    }
+
+    .avatar-wrap {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .page {
+        width: 96%;
+        margin: 15px auto;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        min-height: auto;
+        padding: 45px 16px;
+    }
+
+    .big-title {
+        top: 10%;
+    }
+
+    .big-title h1 {
+        font-size: 15vw;
+    }
+
+    .profile-card {
+        max-width: 390px;
+        padding: 30px 20px;
+        border-radius: 23px;
+    }
+
+    .card-title {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .avatar-wrap {
+        width: min(62vw, 220px);
+        height: min(62vw, 220px);
+        margin-bottom: 25px;
+    }
+
+    .status-dot {
+        width: 27px;
+        height: 27px;
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .hello {
+        font-size: 18px;
+    }
+
+    .intro-description {
+        font-size: 13px;
+    }
+
+    .cover-from {
+        margin-top: 18px;
+    }
+
+    .section {
+        padding: 40px 6%;
+    }
+
+    .section-title {
+        margin-bottom: 23px;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .contact-grid,
+    .skills-grid,
+    .activity-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card,
+    .education-card,
+    .experience-card {
+        padding: 18px;
+    }
+
+    .experience-card h3 {
+        font-size: 19px;
+    }
+
+    .experience-card li {
+        font-size: 14px;
+    }
+
+    .buttons,
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<section class="page home" id="home">
+
+    <nav class="navbar">
+        <div class="logo">MY<span>PORTFOLIO.</span></div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#activities">Activities</a>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+
+        <div class="big-title">
+            <h1>PORTFOLIO</h1>
+        </div>
+
+        <div class="profile-card">
+
+            <h1 class="card-title">PORTFOLIO</h1>
+
+            <div class="avatar-wrap">
+                <img
+                    src="pic1.png"
+                    alt="Ma. Rejoice D. Gabas"
+                    class="avatar"
+                >
+                <span class="status-dot"></span>
+            </div>
+
+            <p class="hello">Hello, I'm</p>
+
+            <h2 class="name">Ma. Rejoice D. Gabas</h2>
+
+            <p class="intro-description">
+                Aspiring IT Professional
+            </p>
+
+            <div class="cover-from">
+                <p>From</p>
+                <h2>BSIS2-04</h2>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#about" class="btn">Explore My Portfolio ↓</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="page" id="about">
+
+    <nav class="navbar">
+        <div class="logo">ABOUT<span> ME.</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="section">
+        <p class="section-label">Get to know me</p>
+
+        <div class="about-intro">
+            <h1 class="about-name">
+                MA. REJOICE <span>D. GABAS</span>
+            </h1>
+
+            <p class="about-description">
+                I am a college student pursuing a Bachelor of Science
+                in Information Systems. I dream of finishing my
+                studies, building a successful career, and providing
+                a better future for my family. I am hardworking,
+                responsible, and willing to learn new skills. I value
+                teamwork, time management, and continuous improvement.
+                Despite the challenges I may face, I will keep working
+                toward my goals with determination and patience.
+            </p>
+
+            <div class="buttons">
+                <a href="#education" class="btn">My Education ↓</a>
+                <a href="#experience" class="btn btn-outline">
+                    My Experience ↓
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="page" id="contact">
+
+    <div class="section">
+        <p class="section-label">Let's connect</p>
+        <h2 class="section-title">CONTACT <span>DETAILS</span></h2>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <span class="label">Phone</span>
+                <a href="tel:09468217037">09468217037</a>
+            </div>
+
+            <div class="contact-card">
+                <span class="label">Email</span>
+                <a href="mailto:gabasrj1@gmail.com">
+                    gabasrj1@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-card" style="grid-column: 1 / -1;">
+                <span class="label">Address</span>
+                <p>
+                    Palawan St., Timog, BF International Village,
+                    Las Piñas City, Metro Manila, Philippines
+                </p>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a href="mailto:gabasrj1@gmail.com" class="btn">
+                Send Me an Email
+            </a>
+            <a href="#home" class="btn btn-outline">
+                Back to Top ↑
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="page" id="education">
+
+    <nav class="navbar">
+        <div class="logo">MY<span>EDUCATION.</span></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+        </div>
+    </nav>
+
+    <div class="section">
+        <p class="section-label">My academic background</p>
+        <h2 class="section-title">EDUCA<span>TION</span></h2>
+
+        <div class="education-card">
+            <h3>
+                Dr. Filemon C. Aguilar Memorial College of Las Piñas
+                (IT Campus)
+            </h3>
+
+            <p>
+                Bachelor of Science in Information Systems (BSIS)
+            </p>
+
+            <p>Expected Graduation: 2029</p>
+
+            <span class="tag">College Student</span>
+            <span class="tag">Information Systems</span>
+        </div>
+
+        <div class="buttons">
+            <a href="#skills" class="btn">Explore My Skills ↓</a>
+            <a href="#home" class="btn btn-outline">Back to Top ↑</a>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="page" id="skills">
+
+    <nav class="navbar">
+        <div class="logo">MY<span>SKILLS.</span></div>
+        <div class="nav-links">
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#activities">Activities</a>
+        </div>
+    </nav>
+
+    <div class="section">
+        <p class="section-label">What I can offer</p>
+        <h2 class="section-title">MY <span>SKILLS</span></h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Strong teamwork and collaboration skills</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Excellent time management and organizational skills</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Fast learner and adaptable</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Proficient in Microsoft Word, Excel, and PowerPoint</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Responsible, dependable, and trustworthy</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Willing to work on weekends and holidays</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-mark">✓</span>
+                <p>Able to work effectively under pressure</p>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a href="#experience" class="btn">Work Experience ↓</a>
+            <a href="#home" class="btn btn-outline">Back to Top ↑</a>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="page" id="experience">
+
+    <nav class="navbar">
+        <div class="logo">WORK<span>EXPERIENCE.</span></div>
+        <div class="nav-links">
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#activities">Activities</a>
+        </div>
+    </nav>
+
+    <div class="section">
+        <p class="section-label">My professional journey</p>
+        <h2 class="section-title">WORK <span>EXPERIENCE</span></h2>
+
+        <div class="timeline">
+
+            <div class="experience-card">
+                <h3>Kumon Checker</h3>
+
+                <p class="company">
+                    Private Company | Las Piñas City
+                </p>
+
+                <p class="date">June 2025 – Present</p>
+
+                <ul>
+                    <li>
+                        Assisted instructors in checking students'
+                        worksheets using paper-based materials and
+                        Kumon Connect (KC).
+                    </li>
+
+                    <li>
+                        Ensured worksheets were checked accurately
+                        and completed on time.
+                    </li>
+
+                    <li>
+                        Organized learning materials and maintained
+                        an efficient workflow.
+                    </li>
+
+                    <li>
+                      Assisted with document layout, printing,
+                        and preparation.
+                    </li>
+
+                    <li>
+                        Performed clerical and administrative tasks
+                        as assigned.
+                    </li>
+
+                    <li>
+                        Helped maintain an organized and efficient
+                        office environment.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a href="#activities" class="btn">
+                School Activities ↓
+            </a>
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="page" id="activities">
+
+    <nav class="navbar">
+        <div class="logo">SCHOOL<span>ACTIVITIES.</span></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="section">
+        <p class="section-label">Participation and teamwork</p>
+        <h2 class="section-title">SCHOOL <span>ACTIVITIES</span></h2>
+
+        <div class="activity-list">
+
+            <div class="activity-card">
+                <h3>NSTP Community Service</h3>
+                <p>
+                    Participated in NSTP community service projects
+                    and collaborated with classmates on community
+                    outreach activities.
+                </p>
+            </div>
+
+            <div class="activity-card">
+                <h3>Student Council Committee</h3>
+                <p>
+                    Served as a documentarian
